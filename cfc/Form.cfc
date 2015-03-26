@@ -306,7 +306,7 @@ THAT'S IT! EASY AS PIE!
                                     </cfloop>
                                 <cfelseif variables.elementObjectsArray[e].type eq 'radioGroup'>
                                 	<cfloop from="1" to="#ArrayLen(variables.elementObjectsArray[e].items)#" index="r">
-                                    	<input id="#variables.elementObjectsArray[e].id#_#r#" name="#variables.elementObjectsArray[e].name#" type="radio" value="#variables.elementObjectsArray[e].items[r][1]#" <cfif session.form[e] EQ "#variables.elementObjectsArray[e].items[r][1]#">checked="checked"</cfif> <cfif variables.elementObjectsArray[e].isRequired eq true AND c eq 1>required</cfif> /> #variables.elementObjectsArray[e].items[r][2]#
+                                    	<input id="#variables.elementObjectsArray[e].id#_#r#" name="#variables.elementObjectsArray[e].name#" type="radio" value="#variables.elementObjectsArray[e].items[r][1]#" <cfif session.form[e] EQ "#variables.elementObjectsArray[e].items[r][1]#">checked="checked"</cfif> <cfif variables.elementObjectsArray[e].isRequired eq true AND r eq 1>required</cfif> /> #variables.elementObjectsArray[e].items[r][2]#
                                     	<cfif variables.elementObjectsArray[e].showVertical eq true AND ArrayLen(variables.elementObjectsArray[e].items) neq 1><br \></cfif>
                                     </cfloop>
                                 <cfelseif variables.elementObjectsArray[e].type eq 'file'>
